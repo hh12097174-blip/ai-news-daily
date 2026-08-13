@@ -1,0 +1,5 @@
+name: score-source
+version: "1.0"
+description: >
+  Scores news sources on credibility (domain authority, freshness,
+  blacklist penalty) to help the analyst rank and filter news.
