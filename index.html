@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 技术博客 · Hermes Agent 驱动</title>
+<style>
+  :root { --bg:#f8f9fa; --card:#fff; --text:#212529; --muted:#6c757d; --accent:#185fa5; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+  .wrap { max-width:780px; margin:0 auto; padding:40px 20px; }
+  header { padding:40px 0 24px; border-bottom:1px solid #e9ecef; margin-bottom:32px; }
+  h1 { font-size:28px; font-weight:700; margin-bottom:8px; }
+  .sub { color:var(--muted); font-size:15px; }
+  .badge { display:inline-block; background:#e6f1fb; color:var(--accent); border-radius:12px; padding:2px 12px; font-size:12px; margin-top:10px; margin-right:6px; }
+  h2 { font-size:20px; margin:32px 0 16px; }
+  .post { background:var(--card); border:1px solid #e9ecef; border-radius:12px; padding:20px 24px; margin-bottom:16px; transition:box-shadow .2s; }
+  .post:hover { box-shadow:0 2px 12px rgba(0,0,0,.08); }
+  .post h3 { font-size:17px; margin-bottom:6px; }
+  .post h3 a { color:var(--text); text-decoration:none; }
+  .post h3 a:hover { color:var(--accent); }
+  .post .meta { font-size:13px; color:var(--muted); }
+  .post .desc { font-size:14px; color:#495057; margin-top:8px; }
+  .pipe { display:flex; gap:8px; flex-wrap:wrap; margin-top:20px; }
+  .pipe span { background:var(--card); border:1px solid #dee2e6; border-radius:8px; padding:6px 14px; font-size:13px; }
+  .pipe b { color:var(--accent); }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid #e9ecef; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>AI 技术博客</h1>
+  <div class="sub">由 Hermes Agent 多智能体系统自动生成 · 每日选题 → 撰写 → 审核 → 发布</div>
+  <span class="badge">5 角色协作</span>
+  <span class="badge">Docker 容器隔离</span>
+  <span class="badge">自动发布</span>
+</header>
+
+<h2>最新文章</h2>
+
+<div class="post">
+  <h3><a href="https://github.com/hh12097174-blip/ai-news-daily/blob/main/content/posts/2026-08-14-ai-news.md" target="_blank">750 Token/s 的 AI 推理：Cerebras 晶圆级芯片如何打破 GPU 的算力诅咒</a></h3>
+  <div class="meta">2026-08-14 · AI硬件 / 推理加速</div>
+  <div class="desc">Cerebras 与 OpenAI 联合发布 GPT-5.6 Sol Ultrafast，750 tokens/s 的极致推理速度背后的技术原理、架构突破与产业影响。</div>
+</div>
+
+<p style="color:var(--muted);font-size:14px;">更多文章由流水线每日自动产出（当前按需运行）。</p>
+
+<h2>系统流水线</h2>
+<div class="pipe">
+  <span><b>collector</b> 选题采集</span>
+  <span>→</span>
+  <span><b>analyst</b> 选题评估</span>
+  <span>→</span>
+  <span><b>editor</b> 撰写文章</span>
+  <span>→</span>
+  <span><b>reviewer</b> 质量审核</span>
+  <span>→</span>
+  <span><b>pusher</b> 发布 GitHub</span>
+</div>
+
+<footer>
+  Hermes Agent + DeepSeek + Docker · 项目代码开源在 GitHub（私有仓库）
+</footer>
+
+</div>
+</body>
+</html>
