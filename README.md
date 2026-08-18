@@ -36,7 +36,7 @@
 | orchestrator | 任务拆解、角色指派、依赖编排 | DeepSeek-V4-Flash | kanban 全套 |
 | collector | 采集 HN / IT之家等候选选题 | DeepSeek-V4-Flash | terminal(curl) |
 | analyst | score_source 评分 + 选题简报 | DeepSeek-V4-Flash | score_source, delegate_task |
-| editor | 撰写 1500-3000 字原创技术文章 | Qwen3-235B（写作强） | write_file, skill_manage |
+| editor | 撰写 1500-3000 字原创技术文章 | GLM-5.2（写作强，实测可用） | write_file, skill_manage |
 | reviewer | 技术准确性/逻辑/时效/原创审核 | DeepSeek-V4-Flash | read_file |
 | pusher | git 提交 + 发布 GitHub | DeepSeek-V4-Flash | terminal(git) |
 
@@ -63,8 +63,8 @@ Agent 框架最大风险是终端权限：模型可能被提示词注入、可�
 
 | 能力 | 状态 | 能力 | 状态 |
 |------|------|------|------|
-| Profile 多角色 | ✅ 6 个 | Delegation 委派 | ✅ SOUL 指引 |
-| Provider 多模型 | ✅ editor 差异化 | Kanban Swarm | ✅ 命令就绪 |
+| Profile 多角色 | ✅ 6 个 | Delegation 委派 | ✅ 实测调用 |
+| Provider 多模型 | ✅ editor=GLM-5.2 实测 | Kanban Swarm | ✅ 实测创建 |
 | SOUL.md 人格 | ✅ 原创 | Orchestrator | ✅ auto_decompose |
 | Cron 流水线 | ✅ 5+1 任务 | Gateway | ✅ 调度器 |
 | context_from | ✅ jobs.json 依赖链 | Hooks | ✅ danger-guard |
@@ -102,7 +102,7 @@ ai-news-daily/
 ## 技术栈
 
 - **框架**：Hermes Agent v0.20.0（Python 3.11）
-- **模型**：硅基流动 DeepSeek-V4-Flash / Qwen3-235B
+- **模型**：硅基流动 DeepSeek-V4-Flash / GLM-5.2（editor 差异化，91 模型可选）
 - **隔离**：Docker（nikolaik/python-nodejs，WSL2 后端）
 - **发布**：GitHub + GitHub Pages
 - **存储**：SQLite（会话 / Kanban / Cron 持久化）
